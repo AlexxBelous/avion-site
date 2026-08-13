@@ -1,11 +1,9 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 import liveReload from 'vite-plugin-live-reload';
 import { resolve } from 'path';
 
 export default defineConfig( {
 	plugins: [
-		react(),
 		// Перезагрузка страницы при изменении любого PHP-файла в теме
 		liveReload( [
 			resolve( __dirname, './**/*.php' )
@@ -47,7 +45,8 @@ export default defineConfig( {
 
 		rollupOptions: {
 			input: {
-				main: resolve( __dirname, 'src/js/main.jsx' )
+				// Если переименуете main.jsx в main.js — поменяйте и тут расширение на .js
+				main: resolve( __dirname, 'src/js/main.js' )
 			}
 		}
 	}

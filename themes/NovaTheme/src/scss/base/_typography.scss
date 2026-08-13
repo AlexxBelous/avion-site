@@ -2,50 +2,73 @@
 @use "@/scss/abstracts/functions" as *;
 @use "@/scss/abstracts/breakpoints" as *;
 
-// h1: (100px)
-h1 {
-	font-size: rem(100);
-	//   @include breakpoint(xlarge) {
-	//     font-size: rem(100);
-	//   }
+// ==========================================
+// HEADINGS (Clash Display)
+// ==========================================
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $font-accent;
+	font-weight: 400;
+	line-height: 1.4;
+	color: $dark-primary;
 }
 
-// h2: (70px)
-h2 {
-	font-size: rem(70);
-	//   @include breakpoint(xlarge) {
-	//     font-size: rem(70);
-	//   }
-}
-
-// h3: (60px)
-h3 {
-	font-size: rem(60);
-	//   @include breakpoint(xlarge) {
-	//     font-size: rem(60);
-	//   }
-}
-
-// h4: (50px)
-h4 {
-	font-size: rem(50);
-	//   @include breakpoint(xlarge) {
-	//     font-size: rem(50);
-	//   }
-}
-
-// h5: (40px)
-h5 {
-	font-size: rem(40);
-	//   @include breakpoint(xlarge) {
-	//     font-size: rem(40);
-	//   }
-}
-
-// h6: (35px / 36px)
-h6 {
+h1,
+.h1 {
 	font-size: rem(36);
-	//   @include breakpoint(xlarge) {
-	//     font-size: rem(36);
-	//   }
+}
+h2,
+.h2 {
+	font-size: rem(32);
+}
+h3,
+.h3 {
+	font-size: rem(24);
+}
+h4,
+.h4 {
+	font-size: rem(20);
+}
+h5,
+.h5 {
+	font-size: rem(16);
+}
+h6,
+.h6 {
+	font-size: rem(14);
+}
+
+// ==========================================
+// BODY TEXT (Satoshi)
+// ==========================================
+body,
+p {
+	font-size: rem(16); // Default: Body Medium
+	line-height: 1.5;
+	color: $dark-primary;
+}
+
+.body-large {
+	font-size: rem(18);
+	line-height: 1.5;
+}
+
+.body-medium {
+	font-size: rem(16);
+	line-height: 1.5;
+}
+
+.body-small {
+	font-size: rem(14);
+	line-height: 1.5;
 }
